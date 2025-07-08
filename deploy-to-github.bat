@@ -48,10 +48,10 @@ echo.
 echo 🔧 Updating configuration files...
 
 REM Update index.html
-powershell -Command "(Get-Content index.html) -replace 'yourusername', '%GITHUB_USERNAME%' | Set-Content index.html"
+powershell -Command "(Get-Content index.html) -replace 'shirocola', '%GITHUB_USERNAME%' | Set-Content index.html"
 
 REM Update package.json
-powershell -Command "(Get-Content package.json) -replace 'yourusername', '%GITHUB_USERNAME%' | Set-Content package.json"
+powershell -Command "(Get-Content package.json) -replace 'shirocola', '%GITHUB_USERNAME%' | Set-Content package.json"
 powershell -Command "(Get-Content package.json) -replace 'yaml-to-env-converter', '%REPO_NAME%' | Set-Content package.json"
 
 echo ✅ Configuration files updated

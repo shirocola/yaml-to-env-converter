@@ -50,13 +50,13 @@ Write-Host "🔧 Updating configuration files..." -ForegroundColor Yellow
 try {
     # Update index.html
     if (Test-Path "index.html") {
-        (Get-Content "index.html") -replace 'yourusername', $githubUsername | Set-Content "index.html"
+        (Get-Content "index.html") -replace 'shirocola', $githubUsername | Set-Content "index.html"
         Write-Host "✅ Updated index.html" -ForegroundColor Green
     }
 
     # Update package.json
     if (Test-Path "package.json") {
-        (Get-Content "package.json") -replace 'yourusername', $githubUsername | Set-Content "package.json"
+        (Get-Content "package.json") -replace 'shirocola', $githubUsername | Set-Content "package.json"
         Write-Host "✅ Updated package.json" -ForegroundColor Green
     }
 

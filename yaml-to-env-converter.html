@@ -15,26 +15,25 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
+            display: block;
+            padding: 20px 0;
         }
 
         .container {
             background: white;
             border-radius: 20px;
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-            padding: 40px;
-            width: 100%;
-            max-width: 800px;
+            padding: 24px 16px;
+            width: 95vw;
+            max-width: 600px;
+            margin: 32px auto;
         }
 
         h1 {
             text-align: center;
             color: #333;
             margin-bottom: 30px;
-            font-size: 2.5rem;
+            font-size: 2rem;
         }
 
         .subtitle {
@@ -47,7 +46,7 @@
         .drop-zone {
             border: 3px dashed #ccc;
             border-radius: 15px;
-            padding: 60px 20px;
+            padding: 32px 10px;
             text-align: center;
             margin-bottom: 30px;
             transition: all 0.3s ease;
@@ -98,7 +97,7 @@
 
         textarea {
             resize: vertical;
-            min-height: 200px;
+            min-height: 120px;
             font-family: 'Courier New', monospace;
             background: #f8f9fa;
         }
@@ -191,14 +190,13 @@
 
         @media (max-width: 600px) {
             .container {
-                padding: 20px;
+                padding: 8px;
+                max-width: 98vw;
             }
-            
             .options {
                 flex-direction: column;
                 gap: 10px;
             }
-            
             .buttons {
                 flex-direction: column;
             }

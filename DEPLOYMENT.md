@@ -26,7 +26,7 @@ git add .
 git commit -m "Initial commit - YAML to .env converter"
 
 # Add remote repository (replace with your GitHub username)
-git remote add origin https://github.com/yourusername/yaml-to-env-converter.git
+git remote add origin https://github.com/shirocola/yaml-to-env-converter.git
 
 # Push to GitHub
 git push -u origin main
@@ -52,16 +52,16 @@ The `.github/workflows/deploy.yml` file is already created. This will:
 
 After creating your repository, update these files:
 
-1. **Update `index.html`** - Replace `yourusername` with your GitHub username:
+1. **Update `index.html`** - Replace `shirocola` with your GitHub username:
    ```html
-   <a href="https://github.com/yourusername/yaml-to-env-converter" target="_blank">
+   <a href="https://github.com/shirocola/yaml-to-env-converter" target="_blank">
    ```
 
 2. **Update `package.json`** - Replace repository URLs:
    ```json
    "repository": {
      "type": "git",
-     "url": "git+https://github.com/yourusername/yaml-to-env-converter.git"
+     "url": "git+https://github.com/shirocola/yaml-to-env-converter.git"
    }
    ```
 
@@ -70,14 +70,14 @@ After creating your repository, update these files:
 ### Step 6: Access Your Site
 
 After deployment (usually takes 5-10 minutes):
-- **Your site will be available at**: `https://yourusername.github.io/yaml-to-env-converter/`
+- **Your site will be available at**: `https://shirocola.github.io/yaml-to-env-converter/`
 - **Check deployment status**: Go to "Actions" tab in your repository
 
 ### Step 7: Custom Domain (Optional)
 
 If you have a custom domain:
 1. **Add a `CNAME` file** in the root directory with your domain
-2. **Configure DNS** to point to `yourusername.github.io`
+2. **Configure DNS** to point to `shirocola.github.io`
 3. **Update settings** in GitHub Pages section
 
 ## 🔧 File Structure for GitHub Pages
@@ -133,9 +133,9 @@ git push origin main
 ## 🌟 Share Your Site
 
 Once deployed, you can share:
-- **Direct converter**: `https://yourusername.github.io/yaml-to-env-converter/yaml-to-env-converter.html`
-- **Main site**: `https://yourusername.github.io/yaml-to-env-converter/`
-- **GitHub repo**: `https://github.com/yourusername/yaml-to-env-converter`
+- **Direct converter**: `https://shirocola.github.io/yaml-to-env-converter/yaml-to-env-converter.html`
+- **Main site**: `https://shirocola.github.io/yaml-to-env-converter/`
+- **GitHub repo**: `https://github.com/shirocola/yaml-to-env-converter`
 
 ## 🆘 Troubleshooting
 
@@ -150,7 +150,7 @@ Once deployed, you can share:
 - Verify all file paths are correct
 
 **Links not working?**
-- Update all `yourusername` references
+- Update all `shirocola` references
 - Check relative paths in HTML files
 - Verify GitHub repository is public
 
