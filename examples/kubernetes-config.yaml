@@ -1,0 +1,40 @@
+# Kubernetes ConfigMap example
+# This demonstrates the env array format commonly used in Kubernetes
+
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: app-config
+  namespace: production
+data:
+  # Standard key-value pairs
+  APP_NAME: "Production App"
+  APP_VERSION: "2.1.0"
+  ENVIRONMENT: "production"
+  
+  # Database configuration
+  DATABASE_HOST: "prod-db.example.com"
+  DATABASE_PORT: "5432"
+  DATABASE_NAME: "prodapp"
+  DATABASE_SSL_MODE: "require"
+  
+  # Redis configuration
+  REDIS_HOST: "prod-redis.example.com"
+  REDIS_PORT: "6379"
+  REDIS_PASSWORD: "redis-secret-password"
+  
+  # API configuration
+  API_BASE_URL: "https://api.production.example.com"
+  API_TIMEOUT: "30"
+  API_RETRIES: "3"
+  
+# Kubernetes-style env array (alternative format)
+env:
+  - name: "MICROSERVICE_URL"
+    value: "https://microservice.production.example.com"
+  - name: "MESSAGE_QUEUE_URL"
+    value: "amqp://user:pass@rabbitmq.production.example.com:5672"
+  - name: "MONITORING_ENDPOINT"
+    value: "https://monitoring.production.example.com/metrics"
+  - name: "FEATURE_FLAGS"
+    value: "analytics:true,new-ui:false,beta-features:false"

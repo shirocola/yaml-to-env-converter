@@ -1,0 +1,41 @@
+{
+  "name": "yaml-to-env-converter",
+  "version": "1.0.0",
+  "description": "A comprehensive tool for converting YAML configuration files to .env format",
+  "main": "convert-yaml-to-env.js",
+  "scripts": {
+    "start": "node convert-yaml-to-env.js",
+    "convert": "node convert-yaml-to-env.js",
+    "help": "node convert-yaml-to-env.js --help",
+    "test": "node convert-yaml-to-env.js test.yaml test.env --preview",
+    "watch": "node convert-yaml-to-env.js secrets.yaml .env --watch",
+    "backup": "node convert-yaml-to-env.js secrets.yaml .env --backup"
+  },
+  "keywords": [
+    "yaml",
+    "env",
+    "environment",
+    "config",
+    "converter",
+    "kubernetes",
+    "docker",
+    "dotenv"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "dependencies": {
+    "js-yaml": "^4.1.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shirocola/yaml-to-env-converter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/shirocola/yaml-to-env-converter/issues"
+  },
+  "homepage": "https://github.com/shirocola/yaml-to-env-converter#readme"
+}

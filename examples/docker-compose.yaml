@@ -1,0 +1,71 @@
+# Docker Compose environment example
+# This shows nested configuration typical in Docker Compose files
+
+version: '3.8'
+
+services:
+  app:
+    # Application configuration
+    app:
+      name: "Dockerized App"
+      version: "1.5.0"
+      environment: "development"
+      
+    # Server configuration
+    server:
+      host: "0.0.0.0"
+      port: 3000
+      workers: 4
+      
+    # Database configuration
+    database:
+      primary:
+        host: "db-primary"
+        port: 5432
+        name: "appdb"
+        user: "appuser"
+        password: "secure-db-password"
+      
+      replica:
+        host: "db-replica"
+        port: 5432
+        name: "appdb"
+        user: "readonly"
+        password: "readonly-password"
+    
+    # Cache configuration
+    cache:
+      redis:
+        host: "redis"
+        port: 6379
+        password: "redis-password"
+        db: 0
+      
+      memcached:
+        host: "memcached"
+        port: 11211
+        
+    # External services
+    services:
+      email:
+        provider: "sendgrid"
+        api_key: "SG.your-sendgrid-key"
+        from_email: "noreply@example.com"
+        
+      storage:
+        provider: "aws-s3"
+        bucket: "my-app-uploads"
+        region: "us-west-2"
+        access_key: "AKIAIOSFODNN7EXAMPLE"
+        secret_key: "wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY"
+        
+      monitoring:
+        sentry_dsn: "https://your-sentry-dsn@sentry.io/project"
+        datadog_api_key: "your-datadog-api-key"
+        
+    # Feature flags
+    features:
+      analytics: true
+      new_dashboard: false
+      beta_features: true
+      maintenance_mode: false
