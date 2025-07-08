@@ -1,6 +1,6 @@
 # YAML to .env Converter
 
-A comprehensive tool for converting YAML configuration files to .env format with multiple interfaces and advanced features.
+A comprehensive tools for converting YAML configuration files to .env format with multiple interfaces and advanced features.
 
 ## 🚀 Features
 
