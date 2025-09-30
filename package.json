@@ -9,7 +9,11 @@
     "help": "node convert-yaml-to-env.js --help",
     "test": "node convert-yaml-to-env.js test.yaml test.env --preview",
     "watch": "node convert-yaml-to-env.js secrets.yaml .env --watch",
-    "backup": "node convert-yaml-to-env.js secrets.yaml .env --backup"
+    "backup": "node convert-yaml-to-env.js secrets.yaml .env --backup",
+    "env:to-yaml": "node convert-env-to-yaml.js",
+    "env:to-yaml:help": "node convert-env-to-yaml.js --help",
+    "env:to-yaml:test": "node convert-env-to-yaml.js examples/example.env examples/test-output.yaml --preview",
+    "env:to-yaml:nested": "node convert-env-to-yaml.js examples/example.env examples/nested-output.yaml --nested --preview"
   },
   "keywords": [
     "yaml",
