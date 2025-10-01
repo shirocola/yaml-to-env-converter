@@ -7,6 +7,7 @@ A comprehensive bidirectional tool for converting between YAML configuration fil
 - **🔄 Bidirectional Conversion**: Convert YAML to .env AND .env to YAML
 - **Multiple Interfaces**: Command-line (Node.js, Batch, PowerShell) and Web-based converter
 - **Smart YAML Processing**: Handles Kubernetes-style env arrays and regular YAML key-value pairs
+- **Kubernetes Array Format**: Convert .env files to Kubernetes-style name/value array format
 - **Nested Object Support**: Automatically flattens nested objects with underscore notation (YAML→ENV) or creates nested structures (ENV→YAML)
 - **Intelligent Value Handling**: Auto-quotes values with spaces or special characters
 - **Watch Mode**: Auto-converts files when changes are detected
@@ -164,6 +165,25 @@ api:
   key: your-secret-key
 ```
 
+5. **Kubernetes-style array format** (using `--k8s-array` flag):
+```bash
+node convert-env-to-yaml.js .env config.yaml --k8s-array
+```
+```yaml
+- name: "APP_NAME"
+  value: "My Application"
+- name: "DEBUG"
+  value: "true"
+- name: "PORT"
+  value: "3000"
+- name: "DATABASE_HOST"
+  value: "localhost"
+- name: "DATABASE_PORT"
+  value: "5432"
+- name: "API_KEY"
+  value: "your-secret-key"
+```
+
 ## 🔧 Usage Options
 
 ### YAML to .env Conversion
@@ -226,11 +246,17 @@ node convert-env-to-yaml.js input.env output.yaml --nested
 # With sorted keys
 node convert-env-to-yaml.js input.env output.yaml --sort
 
+# Kubernetes-style array format
+node convert-env-to-yaml.js input.env output.yaml --k8s-array
+
 # With backup
 node convert-env-to-yaml.js input.env output.yaml --backup
 
 # Combined options
 node convert-env-to-yaml.js input.env output.yaml --nested --sort --preview
+
+# Kubernetes array with sorted keys
+node convert-env-to-yaml.js input.env output.yaml --k8s-array --sort --preview
 
 # Show help
 node convert-env-to-yaml.js --help
