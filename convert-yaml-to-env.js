@@ -36,7 +36,7 @@ function convertYamlToEnv(inputFile, outputFile) {
             });
         }
         // Handle regular YAML key-value pairs
-        else if (yamlData && typeof yamlData === 'object') {
+        if (yamlData && typeof yamlData === 'object') {
             Object.keys(yamlData).forEach(key => {
                 if (key !== 'env') { // Skip the env key if it exists
                     let value = yamlData[key];
